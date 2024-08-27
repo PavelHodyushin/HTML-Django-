@@ -1,28 +1,9 @@
-"""
-URL configuration for UrbanDjango project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
-from task4.views import cart_index, games_index, platform_index, menu_index
-from django.views.generic import TemplateView
+from task5.views import sign_up_by_html, sign_up_by_django
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', platform_index),
-    path('games/', games_index),
-    path('cart/', cart_index),
-    path('menu/', menu_index)
+    path('index5/', sign_up_by_django),
+    path('', sign_up_by_html),
 ]

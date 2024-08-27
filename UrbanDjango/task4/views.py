@@ -9,8 +9,8 @@ def platform_index(request):
     return render(request, 'platform.html')
 
 
-def cart_index(request):
-    return render(request,  'cart.html')
+class cart_index(TemplateView):
+    template_name = 'cart.html'
 
 
 def games_index(request):
@@ -27,8 +27,8 @@ def games_index(request):
 
     return render(request,'games.html', context)
 
-def menu_index(request):
-    return render(request, 'menu.html')
+class menu_index(TemplateView):
+    template_name = 'menu.html'
 
 
 
